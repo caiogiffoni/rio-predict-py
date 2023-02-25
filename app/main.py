@@ -47,7 +47,6 @@ class Body(BaseModel):
 async def predict_values(body: Body):
     body_dict = body.dict()
     body_df = pd.DataFrame(body_dict, index=[0])
-    values_x = pd.DataFrame(new_vars.ddd, index=[0])
     body_df = body_df.rename(columns={
         "property_type_Bed_and_breakfast": "property_type_Bed and breakfast", 
         "property_type_Guest_suite": "property_type_Guest suite", 
@@ -58,15 +57,9 @@ async def predict_values(body: Body):
         "room_type_Shared_room":"room_type_Shared room"
     })
     body_df = body_df[new_vars.index]
-    xxx = pd.DataFrame(new_vars.dddxxx, index=[0])[new_vars.index]
-    values_x_new  = values_x[new_vars.index]
     model = joblib.load('app/model.joblib')
     price = model.predict(body_df)
-    price1 = model.predict(values_x_new)
-    price2 = model.predict(xxx)
 
     return {
-        '0': price[0],
-        "message": price1[0],
-       "message2": price2[0]
+        'price': price[0],
     }
