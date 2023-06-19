@@ -1,3 +1,12 @@
+
+
+<h1 align="center">
+  Airbnb - Predict
+</h1>
+
+
+
+## 💻 Projeto
 Qual deverá ser o preço de aluguel do meu imóvel no Airbnb? (Apenas para RJ) - em Python com Pandas e SKlearn
 
 Dando os devidos créditos e seguindo (parcialmente) os passos dessa análise: https://lnkd.in/d_UJyJzW
@@ -12,3 +21,18 @@ Quanto ao resultado, achei interessante que o peso do mês e do ano não tiveram
 
 Quem quiser dar uma olhadinha mais a fundo, embaixo está o repo que rodei a análise, que tem algumas explicações a mais.
 Mas, resumidamente, os dados foram extraídos e valores irrelevantes, nulos ou que se destacavam dos demais foram tratados. Depois, foram rodados três modelos de previsão e foi escolhido o com 97% de assertividade. Por fim, o modelo treinado foi extraído para ser salvo.
+
+
+## 🔨 Implementações
+
+- [X] Análise dos dados
+- [X] Visualização em gráficos
+- [X] Previsão de preços
+
+
+## ✨ Tecnologias
+
+- [X] Pandas
+- [X] sklearn
+- [X] seaborn
+
